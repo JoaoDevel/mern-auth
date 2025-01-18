@@ -14,7 +14,7 @@ const Login = () => {
 
   const navigate = useNavigate();
 
-  const { backendUrl, setIsLoggedin } = useContext(AppContent);
+  const { backendUrl, setIsLoggedin, getUserData } = useContext(AppContent);
 
   const onSubmitHandler = async (e) => {
     try {
@@ -31,6 +31,7 @@ const Login = () => {
 
         if (data.success) {
           setIsLoggedin(true);
+          getUserData();
           navigate("/");
         } else {
           toast.error(data.message);
@@ -43,13 +44,16 @@ const Login = () => {
 
         if (data.success) {
           setIsLoggedin(true);
+          getUserData();
           navigate("/");
         } else {
           toast.error(data.message);
         }
       }
     } catch (error) {
-      toast.error(data.message);
+      const errorMessage =
+        error.response?.data?.message || "Something went wrong!";
+      toast.error(errorMessage);
     }
   };
 
