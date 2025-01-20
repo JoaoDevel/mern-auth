@@ -79,7 +79,7 @@ const ResetPassword = () => {
   };
 
   return (
-    <div className="flex justify-center items-center bg-gradient-to-br from-blue-200 to-purple-400 min-h-screen">
+    <div className="flex justify-center items-center  min-h-screen">
       <h1
         onClick={() => navigate("/")}
         className="text-2xl sm:text-4xl text-gray-800 cursor-pointer absolute top-5 left-5"

@@ -58,7 +58,7 @@ const Login = () => {
   };
 
   return (
-    <div className="flex  justify-center items-center px-6 min-h-screen bg-gradient-to-br from-blue-200 to-purple-400">
+    <div className="flex  justify-center items-center px-6 min-h-screen ">
       <h1 className="text-2xl sm:text-4xl text-gray-800 absolute top-5 left-5 cursor-pointer">
         Auth
       </h1>
